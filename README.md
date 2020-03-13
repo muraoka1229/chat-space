@@ -5,7 +5,6 @@
 |email|string|null: false|
 |password|string|null: false|
 |name|string|null: false|
-|group_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :posts
 - has_many :users_groups
@@ -15,8 +14,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|post_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :posts
 - has_many :users_groups
@@ -34,10 +31,10 @@
 ## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image|mediumblob||
-|text|text|null: false|
+|image|string|
+|text|text||
 |user_id|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group
