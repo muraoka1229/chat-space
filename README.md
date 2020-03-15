@@ -31,7 +31,7 @@
 ## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image|string|
+|image|string||
 |text|text||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
