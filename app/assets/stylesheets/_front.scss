@@ -5,8 +5,8 @@
   .side-bar{
     width: 300px;
     height: 100vh;
-    background-color: #253141;
-    color: $white-color;
+    background-color: $deep-dark-blue;
+    color: $white;
     float: left;
     &__header{
       height: 100px;
@@ -20,7 +20,7 @@
         justify-content: space-between;
         line-height: 20px;
         &__user-name{
-          color:$white-color;
+          color:$white;
           font-size: 16px;
           font-weight: bold;
           }
@@ -28,17 +28,17 @@
           width: 60px;
           text-align: right;
           &__icon{
-            color:$white-color;
+            color:$white;
           }
         }
       }
     }
     &__groups{
       height: calc(100% - 100px);
-      background-color: #2f3e51;
+      background-color: $dark-blue;
       padding: 20px 20px 0;
       font-weight: bold;
-      color: $white-color;
+      color: $white;
       &__group{
         width: 100%;
         margin-bottom: 40px;
@@ -55,11 +55,11 @@
   
   .chat{
     width: calc(100vw - 300px);
-    background-color: $white-color;
+    background-color: $white;
     float: left;
     &__main-header{
       height: 100px;
-      border-bottom:solid 1px #eeeeee;
+      border-bottom:solid 1px $white-e;
       padding: 0 40px;
       display: flex;
       justify-content: space-between;
@@ -67,13 +67,13 @@
         margin-top: 35px;
         &__current-group{
           font-size: 20px;
-          color: #333333;
+          color: $gray-3;
           margin-bottom: 15px;
         }
         &__member-list{
           display: flex;
           font-size: 12px;
-          color: #999999;
+          color: $gray-9;
         }
       }
       .edit-link{
@@ -86,13 +86,13 @@
         padding: 0 20px;
         margin-top: 28px;
         font-size: 16px;
-        border: solid 1px #38aef0;
-        color: #38aef0;
+        border: solid 1px $pale-blue;
+        color: $pale-blue;
       }
     }
     &__messages{
       height: calc(100vh - 190px);
-      background-color: #fafafa;
+      background-color: $white-fa;
       padding: 46px 40px;
       &__massage{
         padding-bottom: 40px;
@@ -100,17 +100,17 @@
           display: flex;
           margin-bottom: 10px;
           &__talker{
-            color: #333333;
+            color: $gray-3;
             font-size: 16px;
             font-weight: bold;
           }
           &__date{
-            color: #999999;
+            color: $gray-9;
             font-size: 12px;
           }
         }
         &__text{
-          color: #434a54;
+          color: $black-43;
           font-size: 14px;
           margin-bottom: 10px;
         }
@@ -119,7 +119,7 @@
     &__form{
       height: 90px;
       padding: 20px 40px;
-      background-color: #d2d2d2;
+      background-color: $gray-d2;
       &__new-message{
         display: flex;
         height: 50px;
@@ -128,14 +128,14 @@
         &__input-box{
           display: flex;
           height: 50px;
-          background-color:$white-color;
+          background-color:$white;
           padding: 0 40px 0 10px;
           position: relative;
           width: 100%;
           &__text{
             height: 50px;
             width: 100%;
-            color: #434a54;
+            color: $black-43;
             border-style: none;
           }
           &__image{
@@ -149,8 +149,8 @@
         }
         &__btn{
           height: 50px;
-          background-color: #38aef0;
-          color:$white-color;
+          background-color: $pale-blue;
+          color:$white;
           padding: 0 30px;
           margin-left: 15px;
         }
