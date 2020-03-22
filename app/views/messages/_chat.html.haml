@@ -1,0 +1,32 @@
+.chat
+  .chat__main-header
+    .chat__main-header__left-box
+      .chat__main-header__left-box__current-group
+        test_room
+      .chat__main-header__left-box__member-list
+        Member:
+        .chat__main-header__left-box__member-list__member
+          muraoka
+    = link_to "#", class: "edit-link" do
+      .chat__main-header__edit-btn
+        Edit
+  .chat__messages
+    .chat__messages__massage
+      .chat__messages__massage__upper-info
+        .chat__messages__massage__upper-info__talker
+          muraoka
+        .chat__messages__massage__upper-info__date
+          2020.01.01
+      .chat__messages__massage__text
+        test massage
+  .chat__form
+    .chat__form__new-message
+      .chat__form__new-message__input-box
+        .chat__form__new-message__input-box__text
+          type a message
+        .chat__form__new-message__input-box__image
+          %label{class: "input-box__image"}
+            = icon('fas', 'image')
+            %input{type: "file"}
+      .chat__form__new-message__btn
+        Send
