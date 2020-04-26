@@ -20,13 +20,30 @@
       .chat__messages__massage__text
         test massage
   .chat__form
+    =form_for [@group, @message] do |f|
     .chat__form__new-message
       .chat__form__new-message__input-box
-        .chat__form__new-message__input-box__text
-          type a message
+        = f.text_field :content, class: 'chat__form__new-message__input-box__text', placeholder: 'type a message'
         .chat__form__new-message__input-box__image
-          %label{class: "input-box__image"}
-            = icon('fas', 'image')
-            %input{type: "file"}
-      .chat__form__new-message__btn
-        Send
+          = f.label :image, class: 'input-box__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'chat__form__new-message__btn'
+
+
+
+
+
+
+
+-#   .chat__form
+-#     .chat__form__new-message
+-#       .chat__form__new-message__input-box
+-#         .chat__form__new-message__input-box__text
+-#           type a message
+-#         .chat__form__new-message__input-box__image
+-#           %label{class: "input-box__image"}
+-#             = icon('fas', 'image')
+-#             %input{type: "file"}
+-#       .chat__form__new-message__btn
+-#         Send
