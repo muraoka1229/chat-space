@@ -3,7 +3,6 @@
     .side-bar__header__box
       = current_user.name
       .side-bar__header__box__user-name
-        muraoka
       .side-bar__header__box__menu
         = link_to new_group_path do
           =icon('far', 'edit', class: "side-bar__header__box__menu__icon")
@@ -12,11 +11,12 @@
   .side-bar__groups
     - current_user.groups.each do |group|
       .group
-        =link_to '#' do
-          .side-bar__groups__group__group-name
-            =group.name
-          .side-bar__groups__group__latest-message
-            まだメッセージがありません 
+        = link_to group_messages_path(group) do
+          .side-bar__groups__group
+            .side-bar__groups__group__group-name
+              = group.name
+            .side-bar__groups__group__latest-message
+              = group.show_last_message
 
 
 

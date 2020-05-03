@@ -1,0 +1,24 @@
+.chat__messages__message
+  .chat__messages__message__upper-info
+    .chat__messages__message__upper-info__talker
+      = message.user.name
+    .chat__messages__message__upper-info__date
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .chat__messages__message__text
+    - if message.content.present?
+      %p.chat__messages__message__text__content
+        = message.content
+    = image_tag message.image.url, class: 'chat__messages__messsage__image' if message.image.present?
+
+
+
+
+  -# .chat__messages
+  -#   .chat__messages__message
+  -#     .chat__messages__message__upper-info
+  -#       .chat__messages__message__upper-info__talker
+  -#         muraoka
+  -#       .chat__messages__message__upper-info__date
+  -#         2020.01.01
+  -#     .chat__messages__message__text
+  -#       test message
